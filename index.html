@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <meta name="theme-color" content="#e91e63">
-<meta name="description" content="Bajo Zero · Heladería artesanal y Arroz con Leche. Más de 17 sabores, toppings y promociones. Delivery en Santa Cruz, Bolivia.">
+<meta name="description" content="Bajo Zero · Heladería artesanal y Arroz con Leche. Más de 17 sabores, toppings y promociones. Delivery en Yacuíba, Bolivia.">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>Bajo Zero | Heladería & Arroz con Leche – Santa Cruz</title>
+<title>Bajo Zero | Heladería & Arroz con Leche – Yacuíba</title>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
@@ -144,18 +144,15 @@ body.desktop .app-header {
   color: var(--primary);
   position: relative;
   padding: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.logo-btn::after {
-  content: '';
-  position: absolute;
-  left: 0; right: 0; bottom: -4px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
-  border-radius: 4px;
-  transform: scaleX(0.6);
-  transition: transform 0.3s ease;
+.logo-btn img {
+  height: 44px;
+  width: auto;
+  display: block;
 }
-.logo-btn:hover::after { transform: scaleX(1); }
 .search-sticky {
   flex: 1;
   display: flex;
@@ -343,12 +340,13 @@ body.product-open #view-product { display: block !important; }
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(135deg, rgba(233, 30, 99, 0.85) 0%, rgba(255, 152, 0, 0.6) 50%, rgba(233, 30, 99, 0.4) 100%);
+  background: linear-gradient(135deg, rgba(233, 30, 99, 0.4) 0%, rgba(255, 152, 0, 0.2) 50%, rgba(233, 30, 99, 0.1) 100%);
 }
 .hero-slide .hero-content {
   position: absolute;
   z-index: 3;
   left: 6%;
+  right: 6%;
   top: 50%;
   transform: translateY(-50%);
   max-width: 520px;
@@ -356,28 +354,28 @@ body.product-open #view-product { display: block !important; }
   animation: hero-slide-up 0.8s ease;
 }
 @keyframes hero-slide-up {
-  from { opacity: 0; transform: translateY(-40%); }
+  from { opacity: 0; transform: translateY(-38%); }
   to { opacity: 1; transform: translateY(-50%); }
 }
 .hero-content .eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 14px;
-  padding: 6px 12px;
-  background: rgba(255, 255, 255, 0.2);
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.22);
   backdrop-filter: blur(8px);
   color: #fff;
   border-radius: 100px;
-  font: 600 .68rem/1 'Fredoka',sans-serif;
+  font: 600 .66rem/1 'Fredoka',sans-serif;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.28);
 }
 .hero-content h1 {
-  font-size: clamp(2.2rem,5vw,4.8rem);
-  line-height: .95;
-  margin-bottom: 14px;
+  font-size: clamp(2rem,5vw,4.4rem);
+  line-height: .98;
+  margin-bottom: 10px;
   letter-spacing: 0.5px;
   text-shadow: 0 5px 25px rgba(42,10,21,0.4);
 }
@@ -387,23 +385,23 @@ body.product-open #view-product { display: block !important; }
   font-weight: 400;
 }
 .hero-content p {
-  max-width: 450px;
-  font-size: clamp(.82rem,1.4vw,1rem);
-  line-height: 1.6;
+  max-width: 420px;
+  font-size: clamp(.78rem,1.35vw,.95rem);
+  line-height: 1.55;
   color: rgba(255,255,255,.92);
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 }
 .hero-cta {
   border: 0;
   background: #fff;
   color: var(--primary);
-  padding: 14px 24px;
+  padding: 12px 22px;
   border-radius: 100px;
-  font: 700 .78rem 'Fredoka',sans-serif;
+  font: 700 .76rem 'Fredoka',sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.22);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -1367,8 +1365,8 @@ body.desktop.product-open .pd-sticky-bar { bottom: 0; }
   bottom: calc(var(--tab-h) + var(--safe-b) + 20px);
   z-index: 3500;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  flex-direction: row;
+  align-items: center;
   gap: 10px;
   pointer-events: none;
   opacity: 0;
@@ -1398,22 +1396,26 @@ body.desktop.product-open .pd-sticky-bar { bottom: 0; }
   to { opacity: 1; transform: translateY(0); }
 }
 .wa-float-btn {
-  width: 58px;
-  height: 58px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--wa), #128C7E);
+  background: linear-gradient(135deg, var(--primary), var(--accent));
   color: #fff;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 28px;
-  box-shadow: 0 8px 24px rgba(37,211,102,0.4);
+  font-size: 26px;
+  box-shadow: 0 10px 28px rgba(233, 30, 99, 0.35);
   text-decoration: none;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.wa-float-btn:hover { transform: scale(1.1) rotate(10deg); }
+.wa-float-btn i {
+  font-size: 26px;
+  line-height: 1;
+}
+.wa-float-btn:hover { transform: scale(1.08); box-shadow: 0 14px 34px rgba(233, 30, 99, 0.45); }
 .wa-float-btn:active { transform: scale(0.95); }
 body.product-open .wa-float-wrap { display: none !important; }
 .footer-dev {
@@ -1477,28 +1479,27 @@ body.product-open .wa-float-wrap { display: none !important; }
   .header-mobile { display: none !important; }
   .header-desktop {
     display: grid !important;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: auto 1fr;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 24px 22px;
+    padding: 16px 24px 18px;
     gap: 24px;
   }
-  .header-nav-left {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 32px;
-  }
   .logo-center {
-    font-size: 2.4rem;
-    justify-self: center;
-    grid-column: 2;
+    font-size: 3rem;
+    justify-self: start;
+    grid-column: 1;
+  }
+  .logo-center img {
+    height: 72px;
+    width: auto;
+    display: block;
   }
   .header-nav-right {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-end;
     gap: 14px;
   }
   .header-nav-right .search-sticky {
@@ -1622,6 +1623,37 @@ body.product-open .wa-float-wrap { display: none !important; }
   .filters { padding: 0 16px 16px; }
   .grid { padding: 0 12px 24px; gap: 12px; }
   .card { padding: 10px; }
+
+  .hero-slide .hero-content {
+    left: 4%;
+    right: 4%;
+    top: 58%;
+    transform: translateY(-50%);
+    max-width: 92%;
+  }
+  .hero-content .eyebrow {
+    margin-bottom: 8px;
+    padding: 4px 8px;
+    font-size: .6rem;
+    letter-spacing: .8px;
+  }
+  .hero-content h1 {
+    font-size: clamp(1.7rem,6.5vw,2.4rem);
+    margin-bottom: 8px;
+  }
+  .hero-content p {
+    font-size: clamp(.72rem,2.2vw,.82rem);
+    line-height: 1.45;
+    margin-bottom: 14px;
+  }
+  .hero-cta {
+    padding: 10px 16px;
+    font-size: .7rem;
+    letter-spacing: .6px;
+  }
+  .hero-dots {
+    bottom: 14px;
+  }
 }
 
 /* ═══ BENEFICIOS DE MARCA ═══ */
@@ -1707,7 +1739,7 @@ body.product-open .wa-float-wrap { display: none !important; }
 </div>
 <div class="header-inner">
 <div class="header-row header-mobile">
-<button type="button" class="logo-btn" onclick="App.go('home')">Bajo Zero</button>
+<button type="button" class="logo-btn" onclick="App.go('home')" aria-label="Ir al inicio"><img src="logo.png" alt="Bajo Zero"></button>
 <div class="search-sticky">
 <i class="fas fa-search"></i>
 <input type="search" id="search-input" placeholder="Buscar helados..." autocomplete="off">
@@ -1718,23 +1750,23 @@ body.product-open .wa-float-wrap { display: none !important; }
 </button>
 </div>
 <div class="header-desktop">
-<nav class="desktop-nav header-nav-left">
-<button type="button" data-nav="home" onclick="App.go('home')">Inicio</button>
-<button type="button" data-nav="shop" onclick="App.go('shop')">Menú</button>
-<button type="button" data-nav="about" onclick="App.go('about')">Nosotros</button>
-</nav>
-<button type="button" class="logo-btn logo-center" onclick="App.go('home')">Bajo Zero</button>
-<div class="header-nav-right">
-<div class="search-sticky">
-<i class="fas fa-search"></i>
-<input type="search" id="search-input-desktop" placeholder="Buscar helados..." autocomplete="off">
-</div>
-<button type="button" class="icon-btn" onclick="App.sharePage()" aria-label="Compartir página"><i class="fas fa-share-alt"></i></button>
-<button type="button" class="icon-btn cart-btn" onclick="App.openCart()" aria-label="Bolsa">
-<i class="fas fa-shopping-bag"></i>
-<span class="cart-badge" id="cart-badge-desk">0</span>
-</button>
-</div>
+  <button type="button" class="logo-btn logo-center" onclick="App.go('home')" aria-label="Ir al inicio"><img src="logo.png" alt="Bajo Zero"></button>
+  <div class="header-nav-right">
+    <nav class="desktop-nav">
+      <button type="button" data-nav="home" onclick="App.go('home')">Inicio</button>
+      <button type="button" data-nav="shop" onclick="App.go('shop')">Menú</button>
+      <button type="button" data-nav="about" onclick="App.go('about')">Nosotros</button>
+    </nav>
+    <div class="search-sticky">
+      <i class="fas fa-search"></i>
+      <input type="search" id="search-input-desktop" placeholder="Buscar helados..." autocomplete="off">
+    </div>
+    <button type="button" class="icon-btn" onclick="App.sharePage()" aria-label="Compartir página"><i class="fas fa-share-alt"></i></button>
+    <button type="button" class="icon-btn cart-btn" onclick="App.openCart()" aria-label="Bolsa">
+      <i class="fas fa-shopping-bag"></i>
+      <span class="cart-badge" id="cart-badge-desk">0</span>
+    </button>
+  </div>
 </div>
 </div>
 </header>
@@ -1758,13 +1790,6 @@ Desarrollado por <strong>KEY STUDIO</strong>
   <div class="brand-benefit"><i class="fas fa-truck"></i><div><strong>Delivery</strong><span>Rápido y coordinado</span></div></div>
   <div class="brand-benefit"><i class="fab fa-whatsapp"></i><div><strong>WhatsApp</strong><span>Atención directa</span></div></div>
   <div class="brand-benefit"><i class="fas fa-star"></i><div><strong>Arroz con Leche</strong><span>Tres versiones únicas</span></div></div>
-</div>
-
-<!-- Sección Especial Arroz con Leche -->
-<div class="arroz-section">
-  <h2>Arroz con <span>Leche</span></h2>
-  <p>Nuestro producto estrella. Cremoso, artesanal y en tres versiones para elegir tu favorito.</p>
-  <div class="arroz-options" id="arroz-options"></div>
 </div>
 
 <div class="section-title">
@@ -1832,7 +1857,7 @@ Desarrollado por <strong>KEY STUDIO</strong>
 <main id="view-about" class="view">
 <div class="about-hero">
 <h1>Bajo Zero</h1>
-<p>Heladería artesanal & Arroz con Leche · Santa Cruz, Bolivia</p>
+<p>Heladería artesanal & Arroz con Leche · Yacuíba, Bolivia</p>
 </div>
 <div class="about-content" id="about-content"></div>
 </main>
@@ -1888,7 +1913,7 @@ Desarrollado por <strong>KEY STUDIO</strong>
 <div class="site-footer-inner">
 <div>
 <h3>Bajo Zero</h3>
-<p>Heladería artesanal con más de 17 sabores y nuestro famoso Arroz con Leche. Calidad, sabor y tradición en Santa Cruz.</p>
+<p>Heladería artesanal con más de 17 sabores y nuestro famoso Arroz con Leche. Calidad, sabor y tradición en Yacuíba.</p>
 </div>
 <div>
 <h4>Navegación</h4>
@@ -1902,7 +1927,7 @@ Desarrollado por <strong>KEY STUDIO</strong>
 <h4>Contacto</h4>
 <ul>
 <li><button type="button" onclick="App.whatsapp()">WhatsApp: 75179990</button></li>
-<li><span style="opacity:0.85;font-size:0.85rem;">Calle Crevaux frente Plaza Principal, Santa Cruz</span></li>
+<li><span style="opacity:0.85;font-size:0.85rem;">Calle Crevaux entre Comercio y Santa Cruz, Yacuíba</span></li>
 </ul>
 </div>
 </div>
@@ -1927,6 +1952,12 @@ Desarrollado por <strong>KEY STUDIO</strong>
 <button type="button" class="tab" data-view="cart" onclick="App.openCart()"><i class="fas fa-shopping-bag"></i><span>Pedido</span></button>
 </nav>
 <script>
+// ═══════════════════════════════════════════════════════════════
+// SISTEMA DE IMÁGENES — Colocá tus fotos en esta carpeta y usalas acá.
+// Formatos aceptados: JPG, JPEG, PNG, WEBP.
+// Para cambiar una imagen, solo modifica la ruta en el campo "img" o "images".
+// Ejemplo: img: 'mi-foto.jpg', images: ['mi-foto.jpg', 'mi-foto-2.jpg']
+// ═══════════════════════════════════════════════════════════════
 const CONFIG = {
 phone: '59175179990',
 developer: {
@@ -1936,39 +1967,60 @@ url: 'https://keystudio.bo'
 store: {
 name: 'BAJO ZERO',
 tagline: 'Heladería artesanal & Arroz con Leche',
-story: 'Somos una heladería boliviana ubicada en Santa Cruz, apasionada por crear momentos dulces. Ofrecemos más de 17 sabores de helados artesanales y nuestro famoso Arroz con Leche en versiones Clásico, Chocolate y Dulce de Leche.',
+story: 'Somos una heladería boliviana ubicada en Yacuíba, apasionada por crear momentos dulces. Ofrecemos más de 17 sabores de helados artesanales y nuestro famoso Arroz con Leche en versiones Clásico, Chocolate y Dulce de Leche.',
 mission: 'Elaborar helados y postres artesanales con ingredientes frescos y de calidad, brindando una experiencia única y memorable a cada cliente.',
 hours: 'Lun – Dom: 12:00 – 23:00',
-address: 'Calle Crevaux frente Plaza Principal, Santa Cruz, Bolivia',
+address: 'Calle Crevaux entre Comercio y Santa Cruz, Yacuíba, Bolivia',
 email: 'ventas@bajozero.bo',
 instagram: '@bajozero.bo'
 }
 };
 
 /* ═══ CARRUSEL DE PORTADA ═══ */
-const heroImages = [
-  'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=1800&q=85',
-  'https://images.unsplash.com/photo-1560008581-09826d1de69e?w=1800&q=85',
-  'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=1800&q=85'
+const heroSlides = [
+  {
+    image: 'DSC_0252.jpg',
+    eyebrow: 'BAJO ZERO',
+    title: 'Helados <span>',
+    text: 'Más de 17 sabores y nuestro famoso Arroz con Leche en Yacuíba.',
+    cta: 'Ver menú',
+    action: "App.go('shop')"
+  },
+  {
+    image: 'arroz-con-leche.jpeg',
+    eyebrow: 'ARROZ CON LECHE · 3 VERSIONES',
+    title: 'El sabor de <span>siempre</span>',
+    text: 'Clásico, Chocolate o Dulce de Leche. Elegí tu favorito.',
+    cta: 'Explorar menú',
+    action: "App.filter('arroz'); App.go('shop')"
+  },
+  {
+    image: 'HERO2.jpg',
+    eyebrow: 'HELADERÍA',
+    title: 'Tu antojo. <span>Tu momento.</span>',
+    text: 'Renová tu día con nuestros sabores artesanales.',
+    cta: 'Ver categorías',
+    action: "App.go('shop')"
+  }
 ];
 
 const categories = [
-  { id: 'arroz', name: 'Arroz con Leche', image: 'https://images.unsplash.com/photo-1560008581-09826d1de69e?w=600' },
-  { id: 'helados', name: 'Helados', image: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=600' },
-  { id: 'toppings', name: 'Toppings', image: 'https://images.unsplash.com/photo-1580915411954-282cb1b0d780?w=600' },
-  { id: 'bebidas', name: 'Bebidas', image: 'https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600' }
+  { id: 'arroz', name: 'Arroz con Leche', image: '1.jpeg' },
+  { id: 'helados', name: 'Helados', image: '2.jpeg' },
+  { id: 'toppings', name: 'Toppings', image: '3.jpeg' },
+  { id: 'bebidas', name: 'Bebidas', image: '4.jpeg' }
 ];
 
 const promotions = [
-  { badge: 'ESTRELLA', title: 'Arroz con Leche', sub: 'Clásico, Chocolate o Dulce de Leche', image: 'https://images.unsplash.com/photo-1560008581-09826d1de69e?w=1200', cat: 'arroz',
+  { badge: 'ESTRELLA', title: 'Arroz con Leche', sub: 'Clásico, Chocolate o Dulce de Leche', image: '1.jpeg', cat: 'arroz',
   fullDescription: 'Nuestro famoso Arroz con Leche, cremoso y delicioso. Elegí tu favorito: Clásico, Chocolate o Dulce de Leche.',
   validUntil: 'Consultar vigencia vigente en tienda',
   conditions: ['Precio final según modelo', 'Delivery coordinado por separado', 'Sujeto a stock disponible'] },
-  { badge: 'PROMO', title: '2x1 en Helados', sub: 'Lleva 2 y paga menos', image: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=1200', cat: 'helados',
+  { badge: 'PROMO', title: '2x1 en Helados', sub: 'Lleva 2 y paga menos', image: '2.jpeg', cat: 'helados',
   fullDescription: 'Aprovecha nuestra promoción 2x1 en helados seleccionados. Más de 17 sabores para elegir.',
   validUntil: 'Consultar vigencia vigente en tienda',
   conditions: ['Aplica a sabores seleccionados', 'Sujeto a stock disponible', 'No acumulable con otras promos'] },
-  { badge: 'COMBO', title: 'Combo Dulce', sub: 'Arroz + Helado + Topping', image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=1200', cat: 'toppings',
+  { badge: 'COMBO', title: 'Combo Dulce', sub: 'Arroz + Helado + Topping', image: '5.jpeg', cat: 'toppings',
   fullDescription: 'Combina nuestro Arroz con Leche, un helado a elección y un topping especial para disfrutar al máximo.',
   validUntil: 'Consultar vigencia vigente en tienda',
   conditions: ['Delivery sin costo en compras seleccionadas', 'Sujeto a stock disponible', 'Tiempo de entrega según stock'] }
@@ -1986,9 +2038,9 @@ const branches = [
 {
 id: 1,
 name: 'BAJO ZERO — Casa Matriz',
-location: 'Santa Cruz',
+location: 'Yacuíba',
 initials: 'BZ',
-address: 'Calle Crevaux frente Plaza Principal, Santa Cruz',
+address: 'Calle Crevaux entre Comercio y Santa Cruz, Yacuíba',
 phone: '75179990',
 whatsapp: '59175179990',
 hours: 'Lun – Dom: 12:00 – 23:00',
@@ -2002,12 +2054,12 @@ const projects = [
 id: 1,
 title: 'Arroz con Leche Clásico',
 cat: 'arroz',
-location: 'Santa Cruz, Bolivia',
+location: 'Yacuíba, Bolivia',
 client: 'Cliente particular',
 duration: 'Entrega en 30 min',
-image: 'https://images.unsplash.com/photo-1560008581-09826d1de69e?w=900',
+image: '1.jpeg',
 images: [
-'https://images.unsplash.com/photo-1560008581-09826d1de69e?w=1100'
+'1.jpeg'
 ],
 description: 'Arroz con leche cremoso y tradicional, preparado con la receta de la casa.'
 },
@@ -2015,12 +2067,12 @@ description: 'Arroz con leche cremoso y tradicional, preparado con la receta de 
 id: 2,
 title: 'Helado Artesanal',
 cat: 'helados',
-location: 'Santa Cruz, Bolivia',
+location: 'Yacuíba, Bolivia',
 client: 'Cliente particular',
 duration: 'Entrega en 30 min',
-image: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=900',
+image: '2.jpeg',
 images: [
-'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=1100'
+'2.jpeg'
 ],
 description: 'Helado artesanal con más de 17 sabores para elegir.'
 },
@@ -2028,12 +2080,12 @@ description: 'Helado artesanal con más de 17 sabores para elegir.'
 id: 3,
 title: 'Toppings Especiales',
 cat: 'toppings',
-location: 'Santa Cruz, Bolivia',
+location: 'Yacuíba, Bolivia',
 client: 'Cliente particular',
 duration: 'Entrega en 30 min',
-image: 'https://images.unsplash.com/photo-1580915411954-282cb1b0d780?w=900',
+image: '3.jpeg',
 images: [
-'https://images.unsplash.com/photo-1580915411954-282cb1b0d780?w=1100'
+'3.jpeg'
 ],
 description: 'Variedad de toppings para personalizar tu helado o arroz con leche.'
 }
@@ -2047,9 +2099,9 @@ name: 'Arroz con Leche Clásico',
 brand: 'BAJO ZERO',
 price: 15,
 cat: 'arroz',
-img: 'https://images.unsplash.com/photo-1560008581-09826d1de69e?w=900',
+img: '1.jpeg',
 images: [
-'https://images.unsplash.com/photo-1560008581-09826d1de69e?w=900'
+'1.jpeg'
 ],
 desc: 'Arroz con leche cremoso y tradicional, preparado con la receta de la casa.',
 description: '<p>Nuestro <strong>Arroz con Leche Clásico</strong> es cremoso, dulce y preparado con la receta tradicional de la casa. Un postre que te hará recordar los sabores de siempre.</p>',
@@ -2063,9 +2115,9 @@ name: 'Arroz con Leche Chocolate',
 brand: 'BAJO ZERO',
 price: 18,
 cat: 'arroz',
-img: 'https://images.unsplash.com/photo-1560008581-09826d1de69e?w=900',
+img: '2.jpeg',
 images: [
-'https://images.unsplash.com/photo-1560008581-09826d1de69e?w=900'
+'2.jpeg'
 ],
 desc: 'Arroz con leche con un delicioso toque de chocolate.',
 description: '<p><strong>Arroz con Leche con Chocolate</strong>, la combinación perfecta entre lo tradicional y lo indulgente. Cremoso y con todo el sabor del chocolate.</p>',
@@ -2079,9 +2131,9 @@ name: 'Arroz con Leche Dulce de Leche',
 brand: 'BAJO ZERO',
 price: 18,
 cat: 'arroz',
-img: 'https://images.unsplash.com/photo-1560008581-09826d1de69e?w=900',
+img: '3.jpeg',
 images: [
-'https://images.unsplash.com/photo-1560008581-09826d1de69e?w=900'
+'3.jpeg'
 ],
 desc: 'Arroz con leche con dulce de leche, una delicia irresistible.',
 description: '<p><strong>Arroz con Leche con Dulce de Leche</strong>, para los amantes de lo dulce. Una combinación irresistible que te va a encantar.</p>',
@@ -2095,9 +2147,9 @@ name: 'Helado Artesanal (1 bocha)',
 brand: 'BAJO ZERO',
 price: 10,
 cat: 'helados',
-img: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=900',
+img: '4.jpeg',
 images: [
-'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=900'
+'4.jpeg'
 ],
 desc: 'Helado artesanal de 1 bocha. Elegí entre más de 17 sabores.',
 description: '<p><strong>Helado artesanal</strong> de 1 bocha. Disponible en más de 17 sabores para que elijas tu favorito.</p>',
@@ -2111,9 +2163,9 @@ name: 'Topping Especial',
 brand: 'BAJO ZERO',
 price: 5,
 cat: 'toppings',
-img: 'https://images.unsplash.com/photo-1580915411954-282cb1b0d780?w=900',
+img: '5.jpeg',
 images: [
-'https://images.unsplash.com/photo-1580915411954-282cb1b0d780?w=900'
+'5.jpeg'
 ],
 desc: 'Toppings para personalizar tu helado o arroz con leche.',
 description: '<p><strong>Toppings especiales</strong> para agregar a tu helado o arroz con leche. Variedad de opciones para personalizar tu postre.</p>',
@@ -2127,9 +2179,9 @@ name: 'Bebida Refrescante',
 brand: 'BAJO ZERO',
 price: 8,
 cat: 'bebidas',
-img: 'https://images.unsplash.com/photo-1544145945-f90425340c7e?w=900',
+img: '6.jpeg',
 images: [
-'https://images.unsplash.com/photo-1544145945-f90425340c7e?w=900'
+'6.jpeg'
 ],
 desc: 'Bebida fría y refrescante para acompañar tu postre.',
 description: '<p><strong>Bebida refrescante</strong> bien fría para acompañar tu helado o arroz con leche.</p>',
@@ -2592,7 +2644,7 @@ return url.toString();
 },
 async sharePage() {
 const url = this.pageUrl();
-const shareData = { title: 'BAJO ZERO · Heladería artesanal', text: 'Mira el menú de BAJO ZERO: helados artesanales, arroz con leche y más en Santa Cruz.', url };
+const shareData = { title: 'BAJO ZERO · Heladería artesanal', text: 'Mira el menú de BAJO ZERO: helados artesanales, arroz con leche y más en Yacuíba.', url };
 if (navigator.share) {
 try { await navigator.share(shareData); } catch (e) { /* cancelado por el usuario */ }
 return;
@@ -2628,17 +2680,11 @@ document.getElementById('menu-content').innerHTML = `
 renderHero() {
 const track = document.getElementById('hero-carousel');
 if (!track) return;
-const heroCopy = [
-  {eyebrow:'BAJO ZERO · HELADERÍA', title:'Helados <span>artesanales</span>', text:'Más de 17 sabores y nuestro famoso Arroz con Leche en Santa Cruz.', cta:'Ver menú'},
-  {eyebrow:'ARROZ CON LECHE · 3 VERSIONES', title:'El sabor de <span>siempre</span>', text:'Clásico, Chocolate o Dulce de Leche. Elegí tu favorito.', cta:'Explorar menú'},
-  {eyebrow:'HELADOS · TOPPINGS · BEBIDAS', title:'Tu antojo. <span>Tu momento.</span>', text:'Renová tu día con nuestros sabores artesanales.', cta:'Ver categorías'}
-];
-track.innerHTML = heroImages.map((src, i) => {
-  const c = heroCopy[i] || heroCopy[0];
-  const action = i === 1 ? "App.filter('arroz'); App.go('shop')" : i === 2 ? "App.go('shop')" : "App.go('shop')";
-  return `<div class="hero-slide${i === 0 ? ' active' : ''}" style="background-image:url('${src}')"><img src="${src}" alt="BAJO ZERO — Heladería artesanal" loading="${i === 0 ? 'eager' : 'lazy'}"><div class="hero-content"><span class="eyebrow">${c.eyebrow}</span><h1>${c.title}</h1><p>${c.text}</p><button type="button" class="hero-cta" onclick="event.stopPropagation();${action}">${c.cta} <i class="fas fa-arrow-right"></i></button></div></div>`;
+track.innerHTML = heroSlides.map((slide, i) => {
+  const action = slide.action || "App.go('shop')";
+  return `<div class="hero-slide${i === 0 ? ' active' : ''}" style="background-image:url('${slide.image}')"><img src="${slide.image}" alt="BAJO ZERO — Heladería artesanal" loading="${i === 0 ? 'eager' : 'lazy'}"><div class="hero-content"><span class="eyebrow">${slide.eyebrow}</span><h1>${slide.title}</h1><p>${slide.text}</p><button type="button" class="hero-cta" onclick="event.stopPropagation();${action}">${slide.cta} <i class="fas fa-arrow-right"></i></button></div></div>`;
 }).join('') +
-`<div class="hero-dots">${heroImages.map((_, i) =>
+`<div class="hero-dots">${heroSlides.map((_, i) =>
 `<button type="button" class="hero-dot${i === 0 ? ' active' : ''}" data-idx="${i}" onclick="App.goToHeroSlide(${i})" aria-label="Ver imagen ${i + 1}"></button>`
 ).join('')}</div>`;
 this.heroIndex = 0;
@@ -2647,7 +2693,7 @@ this.startHeroAutoplay();
 startHeroAutoplay() {
 if (this.heroTimer) clearInterval(this.heroTimer);
 this.heroTimer = setInterval(() => {
-this.goToHeroSlide((this.heroIndex + 1) % heroImages.length, true);
+this.goToHeroSlide((this.heroIndex + 1) % heroSlides.length, true);
 }, 4500);
 },
 goToHeroSlide(idx, fromAutoplay) {
@@ -2657,19 +2703,6 @@ document.querySelectorAll('#hero-carousel .hero-dot').forEach((el, i) => el.clas
 if (!fromAutoplay) this.startHeroAutoplay();
 },
 renderHome() {
-// Arroz con Leche options
-const arrozProds = products.filter(p => p.cat === 'arroz');
-document.getElementById('arroz-options').innerHTML = arrozProds.map(p => {
-  let icon = '🍚';
-  if (p.name.includes('Chocolate')) icon = '🍫';
-  if (p.name.includes('Dulce')) icon = '🍮';
-  return `<div class="arroz-option" onclick="App.openProduct(${p.id})">
-    <span class="icon">${icon}</span>
-    <strong>${p.name.replace('Arroz con Leche ', '')}</strong>
-    <span>Bs. ${p.price}</span>
-  </div>`;
-}).join('');
-
 document.getElementById('home-promos').innerHTML = promotions.map((pr, idx) =>
 `<article class="promo-card" onclick="App.openPromoModal(${idx});">
 <button type="button" class="card-float-share" onclick="event.stopPropagation(); App.sharePromo(${idx})" aria-label="Compartir promoción"><i class="fas fa-share-alt"></i></button>
@@ -2707,7 +2740,7 @@ document.getElementById('about-content').innerHTML = `
 <div class="about-block"><h3>Misión</h3><p>${s.mission}</p></div>
 <div class="about-block branches-section">
 <h3>Dónde Encontrarnos</h3>
-<p class="branches-intro">Visítanos en nuestra Casa Matriz en Santa Cruz.</p>
+<p class="branches-intro">Visítanos en nuestra Casa Matriz en Yacuíba.</p>
 <div class="branches-grid" id="branches-grid"></div>
 </div>
 <div class="about-block portfolio-section">
